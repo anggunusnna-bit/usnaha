@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Drink Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Fresh Drink Market</h1>
+    <p>Marketplace Minuman Segar</p>
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+        <input type="text" id="username" placeholder="Nama Pengguna">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="hidden">
+        <p>Selamat datang, <b id="userName"></b></p>
+
+        <h3>Tambah Produk Minuman</h3>
+        <input type="text" id="productName" placeholder="Nama Minuman">
+        <input type="number" id="productPrice" placeholder="Harga (Rp)">
+        <input type="text" id="productAddress" placeholder="Alamat Penjual">
+        <input type="number" id="productRating" placeholder="Rating (1-10)" min="1" max="10">
+        <input type="file" id="productImage" accept="image/*">
+        <button onclick="addProduct()">Posting Produk</button>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <hr>
+
+    <!-- SEARCH -->
+    <input type="text" id="search" placeholder="Cari minuman..." onkeyup="searchProduct()">
+
+    <!-- PRODUK -->
+    <div id="productList" class="products"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
